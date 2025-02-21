@@ -1,0 +1,80 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden; /* Mencegah scroll */
+  }
+  
+  .hero {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh; /* Pastikan hero memenuhi layar */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding-top: 50px; /* Tambahkan padding atas */
+    color: white; /* Pastikan teks tetap terlihat */
+  }
+  
+  /* Overlay untuk membuat background lebih gelap */
+  .hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Sesuaikan tingkat kegelapan */
+  }
+  
+  /* Pastikan kontennya tetap di atas overlay */
+  .hero > * {
+    position: relative;
+    z-index: 1;
+  }
+  
+  /* Tambahan untuk responsif */
+  @media (max-width: 768px) {
+    .hero {
+      height: auto;
+      padding: 80px 20px;
+    }
+  }
+  
+  .container {
+    max-width: 1200px;
+  }
+  
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    position: absolute; /* Ubah dari fixed ke absolute */
+    bottom: 0;
+    width: 100%;
+    line-height: 0px; /* Pusatkan teks secara vertikal */
+  }
+  
+  .hero .container {
+    margin-top: -250px; /* Geser elemen ke atas */
+  }
+  
+  .container h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+  }
+  
+  #teks-bawah {
+    display: block;
+    margin-top: -20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    color: whitesmoke;
+    
+}
+
+
